@@ -2,6 +2,23 @@
    HISTORY PAGE STYLES
    ========================================== */
 
+/* MOBILE FIRST - FORCE HIDE TIMELINE LINE ON ALL MOBILE DEVICES */
+@media (max-width: 968px) {
+    .timeline::before,
+    .timeline::after,
+    *[class*="timeline"]::before,
+    *[class*="timeline"]::after {
+        display: none !important;
+        content: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        width: 0 !important;
+        height: 0 !important;
+        position: absolute !important;
+        left: -9999px !important;
+    }
+}
+
 /* Page Header */
 .page-header {
     position: relative;
