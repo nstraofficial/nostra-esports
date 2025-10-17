@@ -150,6 +150,7 @@
     height: 100%;
     background: linear-gradient(to bottom, var(--primary-red), var(--blood-red));
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    z-index: -1; /* Send to back */
 }
 
 /* Force hide timeline on mobile */
@@ -379,6 +380,29 @@
 .struggles-section {
     padding: 100px 0;
     background: var(--dark-gray);
+}
+
+.struggles-section .section-header h2 {
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+}
+
+/* Mobile override for struggles header */
+@media (max-width: 968px) {
+    .struggles-section .section-header h2 {
+        font-size: 1.8rem !important;
+        letter-spacing: 2px !important;
+        word-wrap: break-word;
+    }
+}
+
+@media (max-width: 480px) {
+    .struggles-section .section-header h2 {
+        font-size: 1.3rem !important;
+        letter-spacing: 1px !important;
+        word-wrap: break-word;
+        line-height: 1.3;
+    }
 }
 
 .struggles-grid {
