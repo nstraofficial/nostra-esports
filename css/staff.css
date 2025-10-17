@@ -697,6 +697,8 @@
 
     body {
         font-size: 14px;
+        overflow-x: hidden;
+        width: 100%;
     }
 
     .hero-section {
@@ -706,12 +708,13 @@
     }
 
     .page-title {
-        font-size: 1.8rem;
-        letter-spacing: 2px;
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        word-wrap: break-word;
     }
 
     .page-subtitle {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
 
     .staff-section {
@@ -719,50 +722,52 @@
     }
 
     .section-label {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
         padding: 8px 20px;
         text-align: center;
     }
 
     .label-text {
-        font-size: 1.1rem;
-        letter-spacing: 2px;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        word-wrap: break-word;
     }
 
     .staff-card {
-        padding: 25px 20px;
+        padding: 20px 15px;
         text-align: center;
     }
 
     .photo-frame {
-        width: 160px;
-        height: 160px;
+        width: 140px;
+        height: 140px;
         margin: 0 auto;
     }
 
     .rank-badge {
-        padding: 8px 20px;
-        font-size: 0.75rem;
+        padding: 6px 16px;
+        font-size: 0.7rem;
     }
 
     .staff-name {
-        font-size: 1.8rem;
-        letter-spacing: 2px;
+        font-size: 1.5rem;
+        letter-spacing: 1px;
         text-align: center;
+        word-wrap: break-word;
     }
 
     .staff-position {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         text-align: center;
     }
 
     .info-divider {
-        width: 70px;
+        width: 60px;
         margin: 0 auto;
     }
 
     .staff-description {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         text-align: center;
     }
 
@@ -772,25 +777,26 @@
     }
 
     .photo-frame-small {
-        width: 140px;
-        height: 140px;
+        width: 120px;
+        height: 120px;
         margin: 0 auto;
     }
 
     .admin-badge-small,
     .mod-badge-small {
-        padding: 6px 16px;
-        font-size: 0.7rem;
+        padding: 5px 14px;
+        font-size: 0.65rem;
     }
 
     .staff-name-small {
-        font-size: 1.3rem;
-        letter-spacing: 1px;
+        font-size: 1.2rem;
+        letter-spacing: 0.5px;
         text-align: center;
+        word-wrap: break-word;
     }
 
     .staff-position-small {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         text-align: center;
     }
 
@@ -800,7 +806,7 @@
     }
 
     .staff-description-small {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         text-align: center;
     }
 
@@ -810,8 +816,8 @@
     }
 
     .tag {
-        font-size: 0.75rem;
-        padding: 5px 12px;
+        font-size: 0.7rem;
+        padding: 5px 10px;
     }
 
     .staff-achievements {
@@ -819,8 +825,8 @@
     }
 
     .achievement-item {
-        font-size: 0.8rem;
-        padding: 6px 12px;
+        font-size: 0.75rem;
+        padding: 6px 10px;
         text-align: center;
     }
 }

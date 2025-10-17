@@ -459,6 +459,10 @@ body {
 .motto-quote {
     position: relative;
     margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .quote-mark {
@@ -466,7 +470,17 @@ body {
     font-size: 6rem;
     color: var(--primary-red);
     opacity: 0.3;
-    line-height: 0;
+    line-height: 0.5;
+    display: block;
+    text-align: center;
+}
+
+.quote-mark:first-child {
+    margin-bottom: 20px;
+}
+
+.quote-mark:last-child {
+    margin-top: 20px;
 }
 
 .motto-text {
@@ -478,8 +492,9 @@ body {
         0 0 10px rgba(255, 0, 0, 0.5),
         0 0 20px rgba(255, 0, 0, 0.3);
     line-height: 1.4;
-    margin: 20px 0;
+    margin: 0;
     letter-spacing: 2px;
+    text-align: center;
 }
 
 .motto-description {
@@ -953,11 +968,14 @@ body {
 
     body {
         font-size: 14px;
+        overflow-x: hidden;
+        width: 100%;
     }
 
     .container {
         padding: 0 15px;
         max-width: 100%;
+        overflow-x: hidden;
     }
 
     .navbar {
@@ -984,8 +1002,9 @@ body {
     }
 
     .hero h1 {
-        font-size: 1.8rem;
-        letter-spacing: 2px;
+        font-size: 1.6rem;
+        letter-spacing: 1px;
+        word-wrap: break-word;
     }
 
     .hero-logo img {
@@ -1001,20 +1020,21 @@ body {
     }
 
     .intro-text h3 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+        word-wrap: break-word;
     }
 
     .intro-text p {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
         text-align: left;
     }
 
     .stat-number {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     .stat-label {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
 
     .motto {
@@ -1023,36 +1043,49 @@ body {
 
     .motto-content {
         text-align: center;
-        padding: 0 15px;
+        padding: 0 10px;
     }
 
     .motto-icon {
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
     }
 
     .motto-title {
-        font-size: 1.2rem;
+        font-size: 1rem;
         letter-spacing: 2px;
     }
 
-    .motto-text {
-        font-size: 1.4rem;
-        letter-spacing: 0.5px;
-        text-align: center;
+    .quote-mark {
+        font-size: 3rem;
+        line-height: 0.5;
     }
 
-    .quote-mark {
-        font-size: 4rem;
+    .quote-mark:first-child {
+        margin-bottom: 10px;
+    }
+
+    .quote-mark:last-child {
+        margin-top: 10px;
+    }
+
+    .motto-text {
+        font-size: 1.1rem;
+        letter-spacing: 0.5px;
+        text-align: center;
+        line-height: 1.5;
+        padding: 0 5px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     .motto-description > p {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
         text-align: center;
     }
 
     .principle {
-        padding: 25px 15px;
+        padding: 20px 15px;
         text-align: center;
     }
 
@@ -1061,11 +1094,17 @@ body {
     }
 
     .principle h3 {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        word-wrap: break-word;
+    }
+
+    .principle h4 {
+        font-size: 0.95rem;
+        word-wrap: break-word;
     }
 
     .principle p {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
 
     .section-header {
@@ -1073,7 +1112,8 @@ body {
     }
 
     .section-header h2 {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
+        word-wrap: break-word;
     }
 
     .footer-email {

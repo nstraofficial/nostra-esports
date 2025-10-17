@@ -694,6 +694,8 @@
 
     body {
         font-size: 14px;
+        overflow-x: hidden;
+        width: 100%;
     }
 
     .hero-section {
@@ -703,12 +705,13 @@
     }
 
     .page-title {
-        font-size: 1.8rem;
-        letter-spacing: 2px;
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        word-wrap: break-word;
     }
 
     .page-subtitle {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
 
     .section-intro {
@@ -717,49 +720,60 @@
     }
 
     .section-intro h2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+        word-wrap: break-word;
     }
 
     .section-intro p {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         text-align: center;
     }
 
+    /* Hide the vertical timeline line on mobile */
     .timeline::before {
-        left: 20px;
+        display: none;
     }
 
     .timeline-item {
-        padding-left: 60px;
-        padding-right: 15px;
-        text-align: left !important;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center !important;
+        left: 0 !important;
+        margin-bottom: 30px;
     }
 
+    /* Hide timeline markers on mobile */
     .timeline-marker {
-        width: 35px;
-        height: 35px;
-        font-size: 1.2rem;
+        display: none;
     }
 
     .timeline-content {
         padding: 20px;
+        text-align: center;
+    }
+
+    .timeline-content::before {
+        display: none;
     }
 
     .timeline-content h3 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        word-wrap: break-word;
     }
 
     .timeline-content p {
-        font-size: 0.9rem;
-        text-align: left;
+        font-size: 0.85rem;
+        text-align: center;
     }
 
     .timeline-date {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
+        text-align: center;
     }
 
     .timeline-tag {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
         padding: 6px 12px;
     }
 
@@ -770,21 +784,24 @@
 
     .establishment-content {
         text-align: center;
+        padding: 0 15px;
     }
 
     .establishment-content h2 {
-        font-size: 1.6rem;
-        letter-spacing: 2px;
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+        word-wrap: break-word;
     }
 
     .tagline-text {
-        font-size: 1.2rem !important;
-        letter-spacing: 1px;
+        font-size: 1rem !important;
+        letter-spacing: 0.5px;
         text-align: center;
+        word-wrap: break-word;
     }
 
     .tagline-date {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
 
     .struggles-grid {
@@ -792,20 +809,21 @@
     }
 
     .struggle-card {
-        padding: 25px 15px;
+        padding: 20px 15px;
         text-align: center;
     }
 
     .struggle-icon {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .struggle-card h3 {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        word-wrap: break-word;
     }
 
     .struggle-card p {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         text-align: center;
     }
 
@@ -815,17 +833,18 @@
     }
 
     .conclusion-card {
-        padding: 30px 20px;
+        padding: 25px 15px;
         text-align: center;
     }
 
     .conclusion-card h2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+        word-wrap: break-word;
     }
 
     .conclusion-card p {
-        font-size: 0.95rem;
-        line-height: 1.7;
+        font-size: 0.85rem;
+        line-height: 1.6;
         text-align: center;
     }
 
@@ -835,8 +854,9 @@
     }
 
     .values-section h2 {
-        font-size: 1.6rem;
-        letter-spacing: 3px;
+        font-size: 1.4rem;
+        letter-spacing: 2px;
+        word-wrap: break-word;
     }
 
     .values-grid {
@@ -845,20 +865,21 @@
     }
 
     .value-card {
-        padding: 25px 20px;
+        padding: 20px 15px;
         text-align: center;
     }
 
     .value-icon {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .value-card h3 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        word-wrap: break-word;
     }
 
     .value-card p {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         text-align: center;
     }
 }
