@@ -388,44 +388,259 @@
 }
 
 @media (max-width: 968px) {
-    .rule-card {
-        grid-template-columns: 1fr;
-        gap: 20px;
+    .hero-section {
+        padding: 80px 0 60px;
+        min-height: 50vh;
     }
 
-    .rule-number {
-        font-size: 3rem;
-        text-align: left;
+    .page-title {
+        font-size: 2.5rem;
+        letter-spacing: 3px;
     }
 
-    .penalty-grid {
-        grid-template-columns: 1fr;
+    .page-subtitle {
+        font-size: 1.1rem;
     }
 
-    .intro-warning {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .rule-title {
-        font-size: 1.3rem;
-    }
-
-    .rule-description {
-        font-size: 1rem;
+    .intro-section {
+        padding: 60px 0;
     }
 
     .intro-content h2 {
         font-size: 2rem;
     }
 
+    .intro-content p {
+        font-size: 1rem;
+    }
+
+    .intro-warning {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .warning-icon {
+        font-size: 2rem;
+    }
+
+    .rules-section {
+        padding: 60px 0;
+    }
+
+    .rule-card {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 30px;
+    }
+
+    .rule-number {
+        font-size: 2.5rem;
+        text-align: left;
+    }
+
+    .rule-title {
+        font-size: 1.5rem;
+    }
+
+    .rule-description {
+        font-size: 0.95rem;
+    }
+
+    .enforcement-section {
+        padding: 60px 0;
+    }
+
+    .enforcement-content h2 {
+        font-size: 2rem;
+    }
+
+    .warning-system h3 {
+        font-size: 1.6rem;
+    }
+
+    .warning-item {
+        font-size: 1rem;
+    }
+
+    .penalty-section {
+        padding: 60px 0;
+    }
+
+    .penalty-section h2 {
+        font-size: 2rem;
+    }
+
+    .penalty-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .penalty-card {
+        padding: 25px 20px;
+    }
+
+    .summary-section {
+        padding: 60px 0;
+    }
+
     .summary-card {
-        padding: 30px 20px;
+        padding: 35px 25px;
     }
 
     .summary-card h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 60px 0 40px;
+        min-height: 40vh;
+    }
+
+    .page-title {
         font-size: 1.8rem;
+        letter-spacing: 2px;
+    }
+
+    .page-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .intro-section {
+        padding: 40px 0;
+    }
+
+    .intro-content h2 {
+        font-size: 1.6rem;
+        letter-spacing: 2px;
+    }
+
+    .intro-content p {
+        font-size: 0.9rem;
+    }
+
+    .intro-warning {
+        padding: 15px;
+    }
+
+    .warning-icon {
+        font-size: 1.8rem;
+    }
+
+    .intro-warning p {
+        font-size: 0.85rem;
+    }
+
+    .rules-section {
+        padding: 40px 0;
+    }
+
+    .rule-card {
+        padding: 25px 20px;
+    }
+
+    .rule-number {
+        font-size: 2rem;
+    }
+
+    .rule-icon {
+        font-size: 2rem;
+    }
+
+    .rule-title {
+        font-size: 1.2rem;
+    }
+
+    .rule-description {
+        font-size: 0.85rem;
+    }
+
+    .severity-label {
+        font-size: 0.7rem;
+    }
+
+    .enforcement-section {
+        padding: 40px 0;
+    }
+
+    .enforcement-content {
+        padding: 30px 20px;
+    }
+
+    .enforcement-content h2 {
+        font-size: 1.6rem;
+        letter-spacing: 2px;
+    }
+
+    .enforcement-content p {
+        font-size: 0.9rem;
+    }
+
+    .warning-system h3 {
+        font-size: 1.3rem;
+    }
+
+    .warning-item {
+        font-size: 0.85rem;
+        padding: 12px 15px;
+    }
+
+    .warning-number {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+
+    .penalty-section {
+        padding: 40px 0;
+    }
+
+    .penalty-section h2 {
+        font-size: 1.6rem;
+        letter-spacing: 3px;
+    }
+
+    .penalty-card {
+        padding: 20px 15px;
+    }
+
+    .penalty-icon {
+        font-size: 2rem;
+    }
+
+    .penalty-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .penalty-card p {
+        font-size: 0.85rem;
+    }
+
+    .summary-section {
+        padding: 40px 0;
+    }
+
+    .summary-card {
+        padding: 25px 20px;
+    }
+
+    .summary-card h2 {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+
+    .summary-card p {
+        font-size: 0.9rem;
+    }
+
+    .summary-points {
+        gap: 12px;
+    }
+
+    .point {
+        font-size: 0.85rem;
+        padding: 12px 15px;
     }
 }

@@ -578,6 +578,32 @@
 
 /* Responsive Design */
 @media (max-width: 968px) {
+    .hero-section {
+        padding: 80px 0 60px;
+        min-height: 50vh;
+    }
+
+    .page-title {
+        font-size: 2.5rem;
+        letter-spacing: 3px;
+    }
+
+    .page-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .section-intro {
+        padding: 60px 0;
+    }
+
+    .section-intro h2 {
+        font-size: 2rem;
+    }
+
+    .section-intro p {
+        font-size: 1rem;
+    }
+
     .timeline::before {
         left: 30px;
     }
@@ -602,47 +628,209 @@
         border-top: none;
     }
 
+    .timeline-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.95rem;
+    }
+
+    .establishment-section {
+        padding: 60px 0;
+    }
+
+    .establishment-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .tagline-text {
+        font-size: 1.6rem !important;
+    }
+
     .struggles-grid {
         grid-template-columns: 1fr;
     }
 
-    .values-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .struggle-card {
+        padding: 30px 20px;
     }
 
-    .page-title {
-        font-size: 3rem;
+    .conclusion-card {
+        padding: 40px 25px;
+    }
+
+    .conclusion-card h2 {
+        font-size: 2rem;
+    }
+
+    .conclusion-card p {
+        font-size: 1.05rem;
+    }
+
+    .values-section {
+        padding: 60px 0;
+    }
+
+    .values-section h2 {
+        font-size: 2rem;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .value-card {
+        padding: 30px 20px;
     }
 }
 
 @media (max-width: 480px) {
+    .hero-section {
+        padding: 60px 0 40px;
+        min-height: 40vh;
+    }
+
     .page-title {
-        font-size: 2rem;
-        letter-spacing: 3px;
+        font-size: 1.8rem;
+        letter-spacing: 2px;
     }
 
     .page-subtitle {
-        font-size: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .section-intro {
+        padding: 40px 0;
     }
 
     .section-intro h2 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
+    }
+
+    .section-intro p {
+        font-size: 0.9rem;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        padding-left: 60px;
+        padding-right: 15px;
+    }
+
+    .timeline-marker {
+        width: 35px;
+        height: 35px;
+        font-size: 1.2rem;
+    }
+
+    .timeline-content {
+        padding: 20px;
     }
 
     .timeline-content h3 {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.9rem;
+    }
+
+    .timeline-date {
+        font-size: 0.8rem;
+    }
+
+    .timeline-tag {
+        font-size: 0.75rem;
+        padding: 6px 12px;
+    }
+
+    .establishment-section {
+        padding: 40px 0;
+    }
+
+    .establishment-content h2 {
+        font-size: 1.6rem;
+        letter-spacing: 2px;
+    }
+
+    .tagline-text {
+        font-size: 1.2rem !important;
+        letter-spacing: 1px;
+    }
+
+    .tagline-date {
+        font-size: 0.9rem;
+    }
+
+    .struggles-grid {
+        gap: 15px;
+    }
+
+    .struggle-card {
+        padding: 25px 15px;
+    }
+
+    .struggle-icon {
+        font-size: 2rem;
+    }
+
+    .struggle-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .struggle-card p {
+        font-size: 0.85rem;
+    }
+
+    .conclusion-wrapper {
+        padding: 40px 0;
+    }
+
+    .conclusion-card {
+        padding: 30px 20px;
+    }
+
+    .conclusion-card h2 {
+        font-size: 1.5rem;
+    }
+
+    .conclusion-card p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .values-section {
+        padding: 40px 0;
+    }
+
+    .values-section h2 {
+        font-size: 1.6rem;
+        letter-spacing: 3px;
     }
 
     .values-grid {
         grid-template-columns: 1fr;
+        gap: 15px;
     }
 
-    .establishment-content h2 {
-        font-size: 2rem;
-        letter-spacing: 3px;
+    .value-card {
+        padding: 25px 20px;
     }
 
-    .tagline-text {
-        font-size: 1.3rem !important;
+    .value-icon {
+        font-size: 2.5rem;
+    }
+
+    .value-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .value-card p {
+        font-size: 0.9rem;
     }
 }

@@ -640,12 +640,85 @@
 }
 
 @media (max-width: 968px) {
+    .hero-section {
+        padding: 80px 0 60px;
+        min-height: 50vh;
+    }
+
+    .page-title {
+        font-size: 2.5rem;
+        letter-spacing: 3px;
+    }
+
+    .page-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .platforms-section {
+        padding: 60px 0;
+    }
+
+    .title-wrapper h2 {
+        font-size: 2rem;
+    }
+
+    .platform-card {
+        padding: 30px;
+    }
+
+    .platform-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+
+    .platform-name {
+        font-size: 1.5rem;
+    }
+
+    .platform-description {
+        font-size: 0.95rem;
+    }
+
+    .platform-link {
+        font-size: 0.95rem;
+        padding: 12px 28px;
+    }
+
+    .recruitment-section {
+        padding: 60px 0;
+    }
+
     .recruitment-content {
         padding: 40px 30px;
     }
 
     .recruitment-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .recruitment-tagline {
+        font-size: 1.2rem;
+    }
+
+    .benefit-item {
+        padding: 25px 15px;
+    }
+
+    .benefit-icon {
         font-size: 2.5rem;
+    }
+
+    .benefit-item h4 {
+        font-size: 1.2rem;
+    }
+
+    .recruitment-cta h3 {
+        font-size: 1.7rem;
+    }
+
+    .cta-description {
+        font-size: 1rem;
     }
 
     .cta-buttons {
@@ -658,29 +731,165 @@
         max-width: 400px;
         justify-content: center;
     }
+
+    .contact-section {
+        padding: 60px 0;
+    }
+
+    .contact-section h2 {
+        font-size: 2rem;
+    }
+
+    .contact-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
+    }
 }
 
 @media (max-width: 480px) {
+    .hero-section {
+        padding: 60px 0 40px;
+        min-height: 40vh;
+    }
+
+    .page-title {
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+    }
+
+    .page-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .platforms-section {
+        padding: 40px 0;
+    }
+
+    .title-wrapper h2 {
+        font-size: 1.6rem;
+        letter-spacing: 3px;
+    }
+
+    .platform-card {
+        padding: 25px 20px;
+    }
+
+    .platform-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.8rem;
+    }
+
     .platform-name {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
+    }
+
+    .platform-description {
+        font-size: 0.85rem;
     }
 
     .platform-stats {
         flex-direction: column;
-        gap: 10px;
+        gap: 8px;
+    }
+
+    .stat-item {
+        font-size: 0.8rem;
+    }
+
+    .platform-link {
+        font-size: 0.85rem;
+        padding: 10px 24px;
+    }
+
+    .recruitment-section {
+        padding: 40px 0;
+    }
+
+    .recruitment-content {
+        padding: 30px 20px;
     }
 
     .recruitment-header h2 {
-        font-size: 2rem;
+        font-size: 1.6rem;
         letter-spacing: 2px;
     }
 
     .recruitment-tagline {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .benefit-item {
+        padding: 20px 15px;
+    }
+
+    .benefit-icon {
+        font-size: 2rem;
+    }
+
+    .benefit-item h4 {
         font-size: 1.1rem;
     }
 
+    .benefit-item p {
+        font-size: 0.85rem;
+    }
+
+    .recruitment-platforms {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
     .platform-badge {
-        padding: 12px 20px;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .platform-icon-small {
+        font-size: 1.3rem;
+    }
+
+    .recruitment-cta h3 {
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+    }
+
+    .cta-description {
+        font-size: 0.9rem;
+    }
+
+    .recruit-button {
         font-size: 0.95rem;
+        padding: 12px 25px;
+    }
+
+    .button-icon {
+        font-size: 1.2rem;
+    }
+
+    .contact-section {
+        padding: 40px 0;
+    }
+
+    .contact-section h2 {
+        font-size: 1.6rem;
+        letter-spacing: 3px;
+    }
+
+    .contact-section p {
+        font-size: 0.9rem;
+    }
+
+    .contact-icons {
+        gap: 20px;
+    }
+
+    .contact-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
     }
 }

@@ -607,46 +607,191 @@
 }
 
 @media (max-width: 968px) {
+    .hero-section {
+        padding: 80px 0 60px;
+        min-height: 50vh;
+    }
+
+    .page-title {
+        font-size: 2.5rem;
+        letter-spacing: 3px;
+    }
+
+    .page-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .staff-section {
+        padding: 60px 0;
+    }
+
+    .section-label {
+        font-size: 0.85rem;
+    }
+
+    .label-text {
+        font-size: 1.4rem;
+    }
+
     .staff-card {
         grid-template-columns: 1fr;
         gap: 30px;
+        padding: 30px;
+    }
+
+    .photo-frame {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    .staff-name {
+        font-size: 2.2rem;
+    }
+
+    .staff-position {
+        font-size: 1rem;
+    }
+
+    .staff-description {
+        font-size: 0.95rem;
     }
 
     .staff-grid,
     .staff-grid-two {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
 
-    .staff-name {
-        font-size: 2.5rem;
+    .staff-card-small {
+        padding: 25px;
+    }
+
+    .photo-frame-small {
+        width: 180px;
+        height: 180px;
+    }
+
+    .staff-name-small {
+        font-size: 1.6rem;
+    }
+
+    .staff-position-small {
+        font-size: 0.95rem;
     }
 
     .staff-achievements {
         justify-content: center;
     }
+
+    .achievement-item {
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 480px) {
-    .staff-name {
-        font-size: 2rem;
+    .hero-section {
+        padding: 60px 0 40px;
+        min-height: 40vh;
     }
 
-    .staff-name-small {
-        font-size: 1.5rem;
-    }
-
-    .photo-frame-small {
-        width: 150px;
-        height: 150px;
-    }
-
-    .label-text {
-        font-size: 1.2rem;
+    .page-title {
+        font-size: 1.8rem;
         letter-spacing: 2px;
     }
 
-    .achievement-item {
+    .page-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .staff-section {
+        padding: 40px 0;
+    }
+
+    .section-label {
+        font-size: 0.75rem;
+        padding: 8px 20px;
+    }
+
+    .label-text {
+        font-size: 1.1rem;
+        letter-spacing: 2px;
+    }
+
+    .staff-card {
+        padding: 25px 20px;
+    }
+
+    .photo-frame {
+        width: 160px;
+        height: 160px;
+    }
+
+    .rank-badge {
+        padding: 8px 20px;
+        font-size: 0.75rem;
+    }
+
+    .staff-name {
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+    }
+
+    .staff-position {
+        font-size: 0.9rem;
+    }
+
+    .info-divider {
+        width: 70px;
+    }
+
+    .staff-description {
+        font-size: 0.9rem;
+    }
+
+    .staff-card-small {
+        padding: 20px 15px;
+    }
+
+    .photo-frame-small {
+        width: 140px;
+        height: 140px;
+    }
+
+    .admin-badge-small,
+    .mod-badge-small {
+        padding: 6px 16px;
+        font-size: 0.7rem;
+    }
+
+    .staff-name-small {
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+    }
+
+    .staff-position-small {
         font-size: 0.85rem;
-        padding: 8px 15px;
+    }
+
+    .info-divider-small {
+        width: 50px;
+    }
+
+    .staff-description-small {
+        font-size: 0.85rem;
+    }
+
+    .staff-tags {
+        gap: 8px;
+    }
+
+    .tag {
+        font-size: 0.75rem;
+        padding: 5px 12px;
+    }
+
+    .achievement-item {
+        font-size: 0.8rem;
+        padding: 6px 12px;
     }
 }
