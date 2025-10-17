@@ -604,28 +604,35 @@
         font-size: 1rem;
     }
 
+    /* Hide timeline line on tablet and mobile */
     .timeline::before {
-        left: 30px;
+        display: none !important;
     }
 
     .timeline-item {
         width: 100%;
-        padding-left: 80px;
-        padding-right: 20px;
-        text-align: left !important;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center !important;
         left: 0 !important;
     }
 
     .timeline-item.left .timeline-marker,
     .timeline-item.right .timeline-marker {
-        left: 0;
+        display: none;
     }
 
     .timeline-item.left .timeline-content::before,
     .timeline-item.right .timeline-content::before {
-        left: -12px;
-        border-right: none;
-        border-top: none;
+        display: none !important;
+    }
+
+    .timeline-content {
+        text-align: center;
+    }
+
+    .timeline-content p {
+        text-align: center;
     }
 
     .timeline-content h3 {
@@ -688,14 +695,20 @@
 
 @media (max-width: 480px) {
     * {
-        -webkit-text-size-adjust: none;
-        text-size-adjust: none;
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+    }
+
+    html {
+        font-size: 16px;
     }
 
     body {
-        font-size: 14px;
+        font-size: 1rem;
         overflow-x: hidden;
         width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
     .hero-section {
