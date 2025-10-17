@@ -4,39 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.75, maximum-scale=1.0, user-scalable=no">
     <title>Nostra eSports - Our History</title>
-    <link rel="stylesheet" href="css/style.css?v=4">
-    <link rel="stylesheet" href="css/transitions.css?v=4">
-    <link rel="stylesheet" href="css/history.css?v=4">
+    <link rel="stylesheet" href="css/style.css?v=5">
+    <link rel="stylesheet" href="css/transitions.css?v=5">
+    <link rel="stylesheet" href="css/history.css?v=5">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- FORCE HIDE TIMELINE ON MOBILE -->
-    <style>
-        @media (max-width: 968px) {
-            .timeline::before,
-            .timeline::after {
-                display: none !important;
-                opacity: 0 !important;
-                visibility: hidden !important;
-                width: 0 !important;
-                height: 0 !important;
-            }
-            .timeline-item {
-                left: 0 !important;
-                right: 0 !important;
-                padding: 0 !important;
-                margin: 0 0 30px 0 !important;
-            }
-            .timeline-marker {
-                display: none !important;
-            }
-            .timeline-content::before,
-            .timeline-content::after {
-                display: none !important;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -339,5 +312,19 @@
     <script src="js/transitions.js"></script>
     <script src="js/script.js"></script>
     <script src="js/history.js"></script>
+    <script>
+        // Force remove timeline line on mobile
+        if (window.innerWidth <= 968) {
+            const style = document.createElement('style');
+            style.textContent = `
+                .timeline::before,
+                .timeline::after {
+                    display: none !important;
+                    content: none !important;
+                }
+            `;
+            document.head.appendChild(style);
+        }
+    </script>
 </body>
 </html>
