@@ -1,0 +1,652 @@
+/* ==========================================
+   STAFF PAGE STYLES
+   ========================================== */
+
+/* Leadership Introduction */
+.leadership-intro {
+    padding: 80px 0 60px;
+    background: var(--dark-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+}
+
+.intro-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    line-height: 2;
+    color: var(--text-gray);
+    text-align: center;
+}
+
+/* Section Labels */
+.section-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.label-icon {
+    font-size: 2.5rem;
+}
+
+.label-text {
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-red);
+    letter-spacing: 4px;
+}
+
+/* Clan Master Section */
+.clan-master-section {
+    padding: 80px 0;
+    background: var(--black);
+    position: relative;
+}
+
+.clan-master-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(255, 0, 0, 0.15) 0%, transparent 60%);
+}
+
+/* Vice Clan Master Section */
+.vice-master-section {
+    padding: 80px 0;
+    background: var(--dark-gray);
+}
+
+/* Handler Section */
+.handler-section {
+    padding: 80px 0;
+    background: var(--black);
+}
+
+/* Staff Card - Large (for Master, Vice, Handler) */
+.staff-card {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 50px;
+    background: linear-gradient(135deg, var(--darker-gray), var(--dark-gray));
+    border: 2px solid var(--light-gray);
+    padding: 40px;
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.staff-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(255, 0, 0, 0.3);
+}
+
+.master-card {
+    border-left: 5px solid #FFD700;
+}
+
+.master-card:hover {
+    border-color: #FFD700;
+    box-shadow: 0 15px 50px rgba(255, 215, 0, 0.4);
+}
+
+.vice-card {
+    border-left: 5px solid #C0C0C0;
+}
+
+.vice-card:hover {
+    border-color: #C0C0C0;
+    box-shadow: 0 15px 50px rgba(192, 192, 192, 0.4);
+}
+
+.handler-card {
+    border-left: 5px solid var(--primary-red);
+}
+
+.handler-card:hover {
+    border-color: var(--primary-red);
+}
+
+/* Photo Container */
+.staff-photo-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photo-frame {
+    width: 100%;
+    aspect-ratio: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background: var(--black);
+}
+
+.master-frame {
+    border: 4px solid #FFD700;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+}
+
+.vice-frame {
+    border: 4px solid #C0C0C0;
+    box-shadow: 0 0 30px rgba(192, 192, 192, 0.5);
+}
+
+.handler-frame {
+    border: 4px solid var(--primary-red);
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+}
+
+.photo-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--darker-gray), var(--light-gray));
+    position: relative;
+    overflow: hidden;
+}
+
+/* Placeholder pattern when no image */
+.photo-placeholder::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 0, 0, 0.05) 10px, rgba(255, 0, 0, 0.05) 20px);
+}
+
+.staff-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.staff-card:hover .staff-photo {
+    transform: scale(1.1);
+}
+
+.photo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.staff-card:hover .photo-overlay {
+    opacity: 1;
+}
+
+.photo-icon {
+    font-size: 4rem;
+    animation: bounce 1s ease-in-out infinite;
+}
+
+/* Rank Badge */
+.rank-badge {
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-family: var(--font-primary);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.master-badge {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: var(--black);
+    box-shadow: 0 5px 20px rgba(255, 215, 0, 0.5);
+}
+
+.vice-badge {
+    background: linear-gradient(135deg, #C0C0C0, #808080);
+    color: var(--black);
+    box-shadow: 0 5px 20px rgba(192, 192, 192, 0.5);
+}
+
+.handler-badge {
+    background: linear-gradient(135deg, var(--primary-red), var(--dark-red));
+    color: var(--text-white);
+    box-shadow: 0 5px 20px rgba(255, 0, 0, 0.5);
+}
+
+/* Staff Info */
+.staff-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.staff-name {
+    font-family: var(--font-primary);
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--primary-red);
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+.master-card .staff-name {
+    color: #FFD700;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+.vice-card .staff-name {
+    color: #C0C0C0;
+    text-shadow: 0 0 20px rgba(192, 192, 192, 0.5);
+}
+
+.staff-position {
+    font-family: var(--font-secondary);
+    font-size: 1.3rem;
+    color: var(--text-gray);
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.info-divider {
+    width: 100px;
+    height: 3px;
+    background: var(--primary-red);
+    margin-bottom: 25px;
+}
+
+.master-card .info-divider {
+    background: #FFD700;
+}
+
+.vice-card .info-divider {
+    background: #C0C0C0;
+}
+
+.staff-description {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: var(--text-gray);
+    margin-bottom: 30px;
+}
+
+/* Staff Achievements */
+.staff-achievements {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.achievement-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: var(--black);
+    border: 1px solid var(--light-gray);
+    border-radius: 25px;
+    font-family: var(--font-secondary);
+    font-size: 0.95rem;
+    color: var(--text-white);
+    transition: all 0.3s ease;
+}
+
+.achievement-item:hover {
+    border-color: var(--primary-red);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+}
+
+.achievement-icon {
+    font-size: 1.3rem;
+}
+
+/* Admin & Moderator Sections */
+.admin-section,
+.moderator-section {
+    padding: 80px 0;
+    background: var(--dark-gray);
+}
+
+.moderator-section {
+    background: var(--black);
+}
+
+.section-description {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    max-width: 700px;
+    margin: 0 auto 60px;
+    line-height: 1.8;
+}
+
+/* Staff Grid */
+.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.staff-grid-two {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+/* Small Staff Cards */
+.staff-card-small {
+    background: linear-gradient(135deg, var(--black), var(--darker-gray));
+    border: 2px solid var(--light-gray);
+    padding: 30px;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.staff-card-small:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(255, 0, 0, 0.3);
+}
+
+.admin-card {
+    border-top: 4px solid var(--primary-red);
+}
+
+.mod-card {
+    border-top: 4px solid #00FFFF;
+}
+
+.admin-card:hover {
+    border-color: var(--primary-red);
+}
+
+.mod-card:hover {
+    border-color: #00FFFF;
+    box-shadow: 0 15px 40px rgba(0, 255, 255, 0.3);
+}
+
+/* Small Photo Container */
+.small-photo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.photo-frame-small {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--light-gray);
+    background: var(--black);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.admin-card .photo-frame-small {
+    border-color: var(--primary-red);
+}
+
+.mod-card .photo-frame-small {
+    border-color: #00FFFF;
+}
+
+.staff-card-small:hover .photo-frame-small {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+}
+
+.mod-card:hover .photo-frame-small {
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+}
+
+.photo-placeholder-small {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--darker-gray), var(--light-gray));
+    position: relative;
+    overflow: hidden;
+}
+
+.photo-placeholder-small::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 0, 0, 0.05) 10px, rgba(255, 0, 0, 0.05) 20px);
+}
+
+.staff-photo-small {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.staff-card-small:hover .staff-photo-small {
+    transform: scale(1.15);
+}
+
+.photo-overlay-small {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.staff-card-small:hover .photo-overlay-small {
+    opacity: 1;
+}
+
+.photo-icon-small {
+    font-size: 3rem;
+}
+
+/* Small Rank Badge */
+.rank-badge-small {
+    margin-top: 15px;
+    padding: 8px 20px;
+    font-family: var(--font-primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.admin-badge-small {
+    background: linear-gradient(135deg, var(--primary-red), var(--dark-red));
+    color: var(--text-white);
+    box-shadow: 0 3px 15px rgba(255, 0, 0, 0.4);
+}
+
+.mod-badge-small {
+    background: linear-gradient(135deg, #00FFFF, #008B8B);
+    color: var(--black);
+    box-shadow: 0 3px 15px rgba(0, 255, 255, 0.4);
+}
+
+/* Small Staff Info */
+.staff-info-small {
+    text-align: center;
+}
+
+.staff-name-small {
+    font-family: var(--font-primary);
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary-red);
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.mod-card .staff-name-small {
+    color: #00FFFF;
+}
+
+.staff-position-small {
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    color: var(--text-gray);
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.info-divider-small {
+    width: 60px;
+    height: 2px;
+    background: var(--primary-red);
+    margin: 0 auto 20px;
+}
+
+.mod-card .info-divider-small {
+    background: #00FFFF;
+}
+
+.staff-description-small {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-gray);
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Staff Tags */
+.staff-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.tag {
+    padding: 6px 15px;
+    background: var(--darker-gray);
+    border: 1px solid var(--light-gray);
+    border-radius: 15px;
+    font-size: 0.8rem;
+    color: var(--text-gray);
+    font-family: var(--font-secondary);
+    transition: all 0.3s ease;
+}
+
+.tag:hover {
+    border-color: var(--primary-red);
+    color: var(--primary-red);
+    transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .staff-card {
+        grid-template-columns: 300px 1fr;
+        gap: 30px;
+    }
+
+    .staff-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 968px) {
+    .staff-card {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .staff-grid,
+    .staff-grid-two {
+        grid-template-columns: 1fr;
+    }
+
+    .staff-name {
+        font-size: 2.5rem;
+    }
+
+    .staff-achievements {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .staff-name {
+        font-size: 2rem;
+    }
+
+    .staff-name-small {
+        font-size: 1.5rem;
+    }
+
+    .photo-frame-small {
+        width: 150px;
+        height: 150px;
+    }
+
+    .label-text {
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+    }
+
+    .achievement-item {
+        font-size: 0.85rem;
+        padding: 8px 15px;
+    }
+}

@@ -1,0 +1,431 @@
+/* ==========================================
+   RULES PAGE STYLES
+   ========================================== */
+
+/* Rules Introduction */
+.rules-intro {
+    padding: 80px 0;
+    background: var(--dark-gray);
+}
+
+.intro-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro-icon {
+    font-size: 4rem;
+    margin-bottom: 25px;
+}
+
+.intro-content h2 {
+    font-family: var(--font-primary);
+    font-size: 2.5rem;
+    color: var(--primary-red);
+    margin-bottom: 25px;
+    letter-spacing: 3px;
+}
+
+.intro-text {
+    font-size: 1.15rem;
+    line-height: 2;
+    color: var(--text-gray);
+    margin-bottom: 40px;
+}
+
+.intro-warning {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px 30px;
+    background: linear-gradient(135deg, var(--blood-red), var(--black));
+    border: 2px solid var(--primary-red);
+    border-radius: 8px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.warning-icon {
+    font-size: 2rem;
+}
+
+.intro-warning p {
+    font-size: 1.05rem;
+    color: var(--text-white);
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Rules Section */
+.rules-section {
+    padding: 80px 0;
+    background: var(--black);
+}
+
+/* Rule Cards */
+.rule-card {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 30px;
+    background: linear-gradient(135deg, var(--darker-gray), var(--dark-gray));
+    border: 2px solid var(--light-gray);
+    border-left: 5px solid var(--primary-red);
+    padding: 40px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.rule-card:hover {
+    transform: translateX(10px);
+    box-shadow: 0 10px 40px rgba(255, 0, 0, 0.3);
+    border-color: var(--primary-red);
+}
+
+/* Severity Levels */
+.severity-medium {
+    border-left-color: #FFA500;
+}
+
+.severity-high {
+    border-left-color: var(--primary-red);
+}
+
+.severity-critical {
+    border-left-color: #8B0000;
+    background: linear-gradient(135deg, var(--blood-red), var(--black));
+}
+
+.severity-warning {
+    border-left-color: #FFD700;
+}
+
+.severity-medium:hover {
+    border-color: #FFA500;
+    box-shadow: 0 10px 40px rgba(255, 165, 0, 0.3);
+}
+
+.severity-critical:hover {
+    border-color: #8B0000;
+    box-shadow: 0 10px 40px rgba(139, 0, 0, 0.5);
+}
+
+.severity-warning:hover {
+    border-color: #FFD700;
+    box-shadow: 0 10px 40px rgba(255, 215, 0, 0.3);
+}
+
+/* Rule Number */
+.rule-number {
+    font-family: var(--font-primary);
+    font-size: 5rem;
+    font-weight: 900;
+    color: var(--primary-red);
+    opacity: 0.3;
+    text-align: center;
+    line-height: 1;
+}
+
+.severity-medium .rule-number {
+    color: #FFA500;
+}
+
+.severity-critical .rule-number {
+    color: #8B0000;
+}
+
+.severity-warning .rule-number {
+    color: #FFD700;
+}
+
+/* Rule Content */
+.rule-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.rule-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.rule-icon {
+    font-size: 2.5rem;
+}
+
+.rule-title {
+    font-family: var(--font-primary);
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary-red);
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.severity-medium .rule-title {
+    color: #FFA500;
+}
+
+.severity-critical .rule-title {
+    color: #FF4444;
+}
+
+.severity-warning .rule-title {
+    color: #FFD700;
+}
+
+.rule-description {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: var(--text-gray);
+    margin: 0;
+}
+
+.rule-description strong {
+    color: var(--text-white);
+    font-weight: 700;
+}
+
+.highlight-warning {
+    color: var(--primary-red);
+    font-weight: 600;
+}
+
+/* Rule List */
+.rule-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 15px 0;
+}
+
+.rule-list li {
+    font-size: 1.05rem;
+    color: var(--text-gray);
+    padding: 10px 0 10px 40px;
+    position: relative;
+    line-height: 1.7;
+}
+
+.rule-list li::before {
+    content: '⚡';
+    position: absolute;
+    left: 0;
+    color: var(--primary-red);
+    font-size: 1.3rem;
+}
+
+/* Critical Notice */
+.critical-notice {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 25px;
+    background: rgba(139, 0, 0, 0.3);
+    border: 2px solid #8B0000;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.notice-icon {
+    font-size: 2rem;
+}
+
+.critical-notice p {
+    margin: 0;
+    font-size: 1.05rem;
+    color: var(--text-white);
+}
+
+.critical-notice strong {
+    color: #FF4444;
+    font-weight: 800;
+}
+
+/* Rule Tags */
+.rule-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.tag {
+    padding: 8px 18px;
+    background: var(--darker-gray);
+    border: 1px solid var(--light-gray);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--text-gray);
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.tag:hover {
+    border-color: var(--primary-red);
+    color: var(--primary-red);
+    transform: translateY(-2px);
+}
+
+.warning-tag {
+    background: rgba(255, 215, 0, 0.2);
+    border-color: #FFD700;
+    color: #FFD700;
+}
+
+.critical-tag {
+    background: rgba(139, 0, 0, 0.3);
+    border-color: #8B0000;
+    color: #FF4444;
+    font-weight: 700;
+}
+
+/* Summary Section */
+.summary-section {
+    padding: 80px 0;
+    background: var(--dark-gray);
+}
+
+.summary-card {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, var(--black), var(--darker-gray));
+    border: 3px solid var(--primary-red);
+    border-radius: 12px;
+    padding: 50px;
+    box-shadow: 0 20px 60px rgba(255, 0, 0, 0.3);
+}
+
+.summary-card h2 {
+    font-family: var(--font-primary);
+    font-size: 2.5rem;
+    color: var(--primary-red);
+    text-align: center;
+    margin-bottom: 50px;
+    letter-spacing: 3px;
+}
+
+.penalty-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.penalty-item {
+    background: var(--dark-gray);
+    padding: 30px 20px;
+    border: 2px solid var(--light-gray);
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.penalty-item:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary-red);
+    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.3);
+}
+
+.penalty-item.critical {
+    background: linear-gradient(135deg, var(--blood-red), var(--black));
+    border-color: #8B0000;
+}
+
+.penalty-item.critical:hover {
+    border-color: #FF4444;
+    box-shadow: 0 10px 30px rgba(139, 0, 0, 0.5);
+}
+
+.penalty-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.penalty-item h4 {
+    font-family: var(--font-primary);
+    font-size: 1.2rem;
+    color: var(--primary-red);
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.penalty-item.critical h4 {
+    color: #FF4444;
+}
+
+.penalty-item p {
+    font-size: 1rem;
+    color: var(--text-gray);
+    margin: 0;
+}
+
+.summary-footer {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 2px solid var(--light-gray);
+}
+
+.summary-footer p {
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .penalty-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 968px) {
+    .rule-card {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .rule-number {
+        font-size: 3rem;
+        text-align: left;
+    }
+
+    .penalty-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .intro-warning {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .rule-title {
+        font-size: 1.3rem;
+    }
+
+    .rule-description {
+        font-size: 1rem;
+    }
+
+    .intro-content h2 {
+        font-size: 2rem;
+    }
+
+    .summary-card {
+        padding: 30px 20px;
+    }
+
+    .summary-card h2 {
+        font-size: 1.8rem;
+    }
+}

@@ -1,0 +1,321 @@
+/* ==========================================
+   PAGE TRANSITIONS
+   ========================================== */
+
+/* Page Transition Overlay */
+.page-transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--black);
+    z-index: 9999;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Sliding Panels Effect */
+.transition-panel {
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(90deg, var(--blood-red), var(--primary-red), var(--blood-red));
+    transform: translateX(-100%);
+}
+
+.transition-panel:nth-child(1) { top: 0; }
+.transition-panel:nth-child(2) { top: 20%; }
+.transition-panel:nth-child(3) { top: 40%; }
+.transition-panel:nth-child(4) { top: 60%; }
+.transition-panel:nth-child(5) { top: 80%; }
+
+/* Transition Active State */
+.page-transition-overlay.active .transition-panel:nth-child(1) {
+    animation: slideInOut 1s ease-in-out;
+    animation-delay: 0s;
+}
+
+.page-transition-overlay.active .transition-panel:nth-child(2) {
+    animation: slideInOut 1s ease-in-out;
+    animation-delay: 0.1s;
+}
+
+.page-transition-overlay.active .transition-panel:nth-child(3) {
+    animation: slideInOut 1s ease-in-out;
+    animation-delay: 0.2s;
+}
+
+.page-transition-overlay.active .transition-panel:nth-child(4) {
+    animation: slideInOut 1s ease-in-out;
+    animation-delay: 0.3s;
+}
+
+.page-transition-overlay.active .transition-panel:nth-child(5) {
+    animation: slideInOut 1s ease-in-out;
+    animation-delay: 0.4s;
+}
+
+/* Logo During Transition */
+.transition-logo {
+    position: relative;
+    z-index: 10000;
+    opacity: 0;
+}
+
+.page-transition-overlay.active .transition-logo {
+    animation: logoFade 1s ease-in-out;
+}
+
+.transition-logo img {
+    width: 120px;
+    height: auto;
+    filter: drop-shadow(0 0 30px rgba(255, 0, 0, 1));
+    border-radius: 15px;
+}
+
+/* Slide Animation */
+@keyframes slideInOut {
+    0% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Logo Fade Animation */
+@keyframes logoFade {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+/* Page Load Animation */
+body {
+    animation: pageLoad 0.6s ease-out;
+}
+
+@keyframes pageLoad {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Prevent scroll during transition */
+body.transitioning {
+    overflow: hidden;
+}
+
+/* Alternative: Fade Transition (Simpler) */
+.page-transition-overlay.fade-transition {
+    background: radial-gradient(circle, var(--primary-red) 0%, var(--black) 70%);
+    opacity: 0;
+}
+
+.page-transition-overlay.fade-transition.active {
+    animation: fadeInOut 0.8s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Lightning Effect During Transition */
+.lightning-effect {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 0;
+    background: var(--primary-red);
+    box-shadow: 0 0 20px var(--primary-red), 0 0 40px var(--primary-red);
+    opacity: 0;
+}
+
+.page-transition-overlay.active .lightning-effect {
+    animation: lightning 0.6s ease-in-out 0.2s;
+}
+
+@keyframes lightning {
+    0%, 100% {
+        opacity: 0;
+        height: 0;
+    }
+    10% {
+        opacity: 1;
+        height: 100vh;
+    }
+    20% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0;
+    }
+}
+
+/* Raven Wing Effect */
+.wing-left,
+.wing-right {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: var(--black);
+    transform-origin: center;
+}
+
+.wing-left {
+    left: 0;
+    clip-path: polygon(0 0, 100% 0, 50% 50%, 100% 100%, 0 100%);
+}
+
+.wing-right {
+    right: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 50% 50%);
+}
+
+.page-transition-overlay.wing-transition.active .wing-left {
+    animation: wingCloseLeft 1s ease-in-out;
+}
+
+.page-transition-overlay.wing-transition.active .wing-right {
+    animation: wingCloseRight 1s ease-in-out;
+}
+
+@keyframes wingCloseLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    40% {
+        transform: translateX(0);
+    }
+    60% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes wingCloseRight {
+    0% {
+        transform: translateX(100%);
+    }
+    40% {
+        transform: translateX(0);
+    }
+    60% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Chain Break Effect */
+.chain-break {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4px;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        var(--primary-red) 0px,
+        var(--primary-red) 20px,
+        transparent 20px,
+        transparent 30px
+    );
+    opacity: 0;
+}
+
+.page-transition-overlay.active .chain-break {
+    animation: chainBreak 0.8s ease-out 0.1s;
+}
+
+@keyframes chainBreak {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scaleY(0);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scaleY(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scaleY(1) rotateZ(90deg);
+    }
+}
+
+/* Smooth content fade in after transition */
+.content-wrapper {
+    animation: contentFadeIn 0.8s ease-out 0.2s both;
+}
+
+@keyframes contentFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Loading Text */
+.transition-text {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-primary);
+    font-size: 1.2rem;
+    color: var(--primary-red);
+    letter-spacing: 3px;
+    opacity: 0;
+    text-transform: uppercase;
+}
+
+.page-transition-overlay.active .transition-text {
+    animation: textPulse 1s ease-in-out;
+}
+
+@keyframes textPulse {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
