@@ -687,9 +687,19 @@
 }
 
 @media (max-width: 480px) {
+    * {
+        -webkit-text-size-adjust: none;
+        text-size-adjust: none;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
     .hero-section {
         padding: 60px 0 40px;
         min-height: 40vh;
+        text-align: center;
     }
 
     .page-title {
@@ -703,6 +713,7 @@
 
     .section-intro {
         padding: 40px 0;
+        text-align: center;
     }
 
     .section-intro h2 {
@@ -711,6 +722,7 @@
 
     .section-intro p {
         font-size: 0.9rem;
+        text-align: center;
     }
 
     .timeline::before {
@@ -720,6 +732,7 @@
     .timeline-item {
         padding-left: 60px;
         padding-right: 15px;
+        text-align: left !important;
     }
 
     .timeline-marker {
@@ -738,6 +751,7 @@
 
     .timeline-content p {
         font-size: 0.9rem;
+        text-align: left;
     }
 
     .timeline-date {
@@ -751,6 +765,11 @@
 
     .establishment-section {
         padding: 40px 0;
+        text-align: center;
+    }
+
+    .establishment-content {
+        text-align: center;
     }
 
     .establishment-content h2 {
@@ -761,6 +780,7 @@
     .tagline-text {
         font-size: 1.2rem !important;
         letter-spacing: 1px;
+        text-align: center;
     }
 
     .tagline-date {
@@ -773,6 +793,7 @@
 
     .struggle-card {
         padding: 25px 15px;
+        text-align: center;
     }
 
     .struggle-icon {
@@ -785,14 +806,17 @@
 
     .struggle-card p {
         font-size: 0.85rem;
+        text-align: center;
     }
 
     .conclusion-wrapper {
         padding: 40px 0;
+        text-align: center;
     }
 
     .conclusion-card {
         padding: 30px 20px;
+        text-align: center;
     }
 
     .conclusion-card h2 {
@@ -802,10 +826,12 @@
     .conclusion-card p {
         font-size: 0.95rem;
         line-height: 1.7;
+        text-align: center;
     }
 
     .values-section {
         padding: 40px 0;
+        text-align: center;
     }
 
     .values-section h2 {
@@ -820,6 +846,7 @@
 
     .value-card {
         padding: 25px 20px;
+        text-align: center;
     }
 
     .value-icon {
@@ -832,5 +859,6 @@
 
     .value-card p {
         font-size: 0.9rem;
+        text-align: center;
     }
 }

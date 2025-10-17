@@ -690,9 +690,19 @@
 }
 
 @media (max-width: 480px) {
+    * {
+        -webkit-text-size-adjust: none;
+        text-size-adjust: none;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
     .hero-section {
         padding: 60px 0 40px;
         min-height: 40vh;
+        text-align: center;
     }
 
     .page-title {
@@ -711,6 +721,7 @@
     .section-label {
         font-size: 0.75rem;
         padding: 8px 20px;
+        text-align: center;
     }
 
     .label-text {
@@ -720,11 +731,13 @@
 
     .staff-card {
         padding: 25px 20px;
+        text-align: center;
     }
 
     .photo-frame {
         width: 160px;
         height: 160px;
+        margin: 0 auto;
     }
 
     .rank-badge {
@@ -735,27 +748,33 @@
     .staff-name {
         font-size: 1.8rem;
         letter-spacing: 2px;
+        text-align: center;
     }
 
     .staff-position {
         font-size: 0.9rem;
+        text-align: center;
     }
 
     .info-divider {
         width: 70px;
+        margin: 0 auto;
     }
 
     .staff-description {
         font-size: 0.9rem;
+        text-align: center;
     }
 
     .staff-card-small {
         padding: 20px 15px;
+        text-align: center;
     }
 
     .photo-frame-small {
         width: 140px;
         height: 140px;
+        margin: 0 auto;
     }
 
     .admin-badge-small,
@@ -767,22 +786,27 @@
     .staff-name-small {
         font-size: 1.3rem;
         letter-spacing: 1px;
+        text-align: center;
     }
 
     .staff-position-small {
         font-size: 0.85rem;
+        text-align: center;
     }
 
     .info-divider-small {
         width: 50px;
+        margin: 0 auto;
     }
 
     .staff-description-small {
         font-size: 0.85rem;
+        text-align: center;
     }
 
     .staff-tags {
         gap: 8px;
+        justify-content: center;
     }
 
     .tag {
@@ -790,8 +814,13 @@
         padding: 5px 12px;
     }
 
+    .staff-achievements {
+        justify-content: center;
+    }
+
     .achievement-item {
         font-size: 0.8rem;
         padding: 6px 12px;
+        text-align: center;
     }
 }

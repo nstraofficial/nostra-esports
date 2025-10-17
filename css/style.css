@@ -37,12 +37,18 @@ body {
     color: var(--text-white);
     line-height: 1.6;
     overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* ==========================================
@@ -940,17 +946,31 @@ body {
 }
 
 @media (max-width: 480px) {
+    * {
+        -webkit-text-size-adjust: none;
+        text-size-adjust: none;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
     .container {
         padding: 0 15px;
+        max-width: 100%;
     }
 
     .navbar {
         padding: 15px 0;
     }
 
-    .logo {
-        width: 40px;
+    .nav-container {
+        padding: 15px;
+    }
+
+    .logo img {
         height: 40px;
+        width: auto;
     }
 
     .logo-text {
@@ -960,6 +980,7 @@ body {
     .hero {
         padding: 60px 0 40px;
         min-height: 60vh;
+        text-align: center;
     }
 
     .hero h1 {
@@ -975,12 +996,17 @@ body {
         font-size: 0.9rem;
     }
 
+    .intro-section {
+        text-align: center;
+    }
+
     .intro-text h3 {
         font-size: 1.3rem;
     }
 
     .intro-text p {
         font-size: 0.95rem;
+        text-align: left;
     }
 
     .stat-number {
@@ -993,6 +1019,11 @@ body {
 
     .motto {
         padding: 40px 0;
+    }
+
+    .motto-content {
+        text-align: center;
+        padding: 0 15px;
     }
 
     .motto-icon {
@@ -1008,6 +1039,7 @@ body {
     .motto-text {
         font-size: 1.4rem;
         letter-spacing: 0.5px;
+        text-align: center;
     }
 
     .quote-mark {
@@ -1016,10 +1048,12 @@ body {
 
     .motto-description > p {
         font-size: 0.95rem;
+        text-align: center;
     }
 
     .principle {
         padding: 25px 15px;
+        text-align: center;
     }
 
     .principle-icon {
@@ -1032,6 +1066,10 @@ body {
 
     .principle p {
         font-size: 0.9rem;
+    }
+
+    .section-header {
+        text-align: center;
     }
 
     .section-header h2 {
