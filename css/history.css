@@ -135,6 +135,16 @@
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
 }
 
+/* Force hide timeline on mobile */
+@media (max-width: 968px) {
+    .timeline::before {
+        display: none !important;
+        opacity: 0 !important;
+        width: 0 !important;
+        height: 0 !important;
+    }
+}
+
 .timeline-item {
     position: relative;
     width: 50%;
@@ -705,93 +715,113 @@
 
     body {
         font-size: 1rem;
-        overflow-x: hidden;
+        overflow-x: hidden !important;
         width: 100%;
         margin: 0;
         padding: 0;
     }
 
     .hero-section {
-        padding: 60px 0 40px;
-        min-height: 40vh;
+        padding: 60px 0 30px;
+        min-height: 30vh;
         text-align: center;
     }
 
     .page-title {
-        font-size: 1.5rem;
-        letter-spacing: 1px;
+        font-size: 2rem !important;
+        letter-spacing: 3px !important;
         word-wrap: break-word;
+        text-align: center;
     }
 
     .page-subtitle {
-        font-size: 0.85rem;
+        font-size: 0.9rem !important;
+        text-align: center;
+        padding: 0 10px;
     }
 
     .section-intro {
-        padding: 40px 0;
+        padding: 30px 0;
         text-align: center;
     }
 
     .section-intro h2 {
-        font-size: 1.3rem;
+        font-size: 1.5rem !important;
         word-wrap: break-word;
+        text-align: center;
     }
 
     .section-intro p {
-        font-size: 0.85rem;
+        font-size: 0.9rem !important;
         text-align: center;
+        padding: 0 10px;
     }
 
-    /* Hide the vertical timeline line on mobile */
+    /* FORCE HIDE ALL TIMELINE ELEMENTS */
     .timeline::before {
-        display: none;
+        display: none !important;
+        content: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        width: 0 !important;
+        height: 0 !important;
     }
 
     .timeline-item {
-        width: 100%;
-        padding-left: 0;
-        padding-right: 0;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 0 20px 0 !important;
         text-align: center !important;
         left: 0 !important;
-        margin-bottom: 30px;
+        right: 0 !important;
+        transform: none !important;
     }
 
-    /* Hide timeline markers on mobile */
+    /* Hide timeline markers */
     .timeline-marker {
-        display: none;
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
     }
 
     .timeline-content {
-        padding: 20px;
-        text-align: center;
+        padding: 20px 15px !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+        max-width: 100% !important;
     }
 
     .timeline-content::before {
-        display: none;
+        display: none !important;
+        content: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
     }
 
     .timeline-content h3 {
-        font-size: 1.1rem;
+        font-size: 1.3rem !important;
         word-wrap: break-word;
-    }
-
-    .timeline-content p {
-        font-size: 0.85rem;
         text-align: center;
     }
 
+    .timeline-content p {
+        font-size: 0.9rem !important;
+        text-align: center !important;
+        line-height: 1.6;
+    }
+
     .timeline-date {
-        font-size: 0.75rem;
+        font-size: 0.8rem !important;
         text-align: center;
     }
 
     .timeline-tag {
-        font-size: 0.7rem;
+        font-size: 0.75rem !important;
         padding: 6px 12px;
     }
 
     .establishment-section {
-        padding: 40px 0;
+        padding: 30px 0;
         text-align: center;
     }
 
@@ -801,14 +831,15 @@
     }
 
     .establishment-content h2 {
-        font-size: 1.4rem;
-        letter-spacing: 1px;
+        font-size: 1.6rem !important;
+        letter-spacing: 2px;
         word-wrap: break-word;
+        text-align: center;
     }
 
     .tagline-text {
-        font-size: 1rem !important;
-        letter-spacing: 0.5px;
+        font-size: 1.2rem !important;
+        letter-spacing: 1px !important;
         text-align: center;
         word-wrap: break-word;
     }
@@ -819,6 +850,7 @@
 
     .struggles-grid {
         gap: 15px;
+        grid-template-columns: 1fr !important;
     }
 
     .struggle-card {
@@ -827,21 +859,22 @@
     }
 
     .struggle-icon {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .struggle-card h3 {
-        font-size: 1rem;
+        font-size: 1.1rem !important;
         word-wrap: break-word;
+        text-align: center;
     }
 
     .struggle-card p {
-        font-size: 0.8rem;
+        font-size: 0.85rem !important;
         text-align: center;
     }
 
     .conclusion-wrapper {
-        padding: 40px 0;
+        padding: 30px 0;
         text-align: center;
     }
 
@@ -851,29 +884,31 @@
     }
 
     .conclusion-card h2 {
-        font-size: 1.3rem;
+        font-size: 1.4rem !important;
         word-wrap: break-word;
+        text-align: center;
     }
 
     .conclusion-card p {
-        font-size: 0.85rem;
+        font-size: 0.9rem !important;
         line-height: 1.6;
         text-align: center;
     }
 
     .values-section {
-        padding: 40px 0;
+        padding: 30px 0;
         text-align: center;
     }
 
     .values-section h2 {
-        font-size: 1.4rem;
+        font-size: 1.5rem !important;
         letter-spacing: 2px;
         word-wrap: break-word;
+        text-align: center;
     }
 
     .values-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
         gap: 15px;
     }
 
@@ -887,12 +922,13 @@
     }
 
     .value-card h3 {
-        font-size: 1.1rem;
+        font-size: 1.1rem !important;
         word-wrap: break-word;
+        text-align: center;
     }
 
     .value-card p {
-        font-size: 0.85rem;
+        font-size: 0.85rem !important;
         text-align: center;
     }
 }

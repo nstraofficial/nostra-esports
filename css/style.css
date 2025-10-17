@@ -1008,9 +1008,10 @@ body {
     }
 
     .hero h1 {
-        font-size: 1.6rem;
-        letter-spacing: 1px;
+        font-size: 2rem !important;
+        letter-spacing: 2px;
         word-wrap: break-word;
+        text-align: center;
     }
 
     .hero-logo img {
@@ -1118,8 +1119,9 @@ body {
     }
 
     .section-header h2 {
-        font-size: 1.4rem;
+        font-size: 1.8rem !important;
         word-wrap: break-word;
+        text-align: center;
     }
 
     .footer-email {
