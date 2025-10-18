@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.75, maximum-scale=1.0, user-scalable=no">
     <title>Nostra eSports - Our History</title>
-    <link rel="stylesheet" href="css/style.css?v=5">
-    <link rel="stylesheet" href="css/transitions.css?v=5">
-    <link rel="stylesheet" href="css/history.css?v=5">
+    <link rel="stylesheet" href="css/style.css?v=6">
+    <link rel="stylesheet" href="css/transitions.css?v=6">
+    <link rel="stylesheet" href="css/history.css?v=6">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -313,17 +313,33 @@
     <script src="js/script.js"></script>
     <script src="js/history.js"></script>
     <script>
-        // Force remove timeline line on mobile
+        // NUCLEAR OPTION: Force remove timeline line on mobile
         if (window.innerWidth <= 968) {
+            // Method 1: Inject CSS
             const style = document.createElement('style');
             style.textContent = `
                 .timeline::before,
-                .timeline::after {
+                .timeline::after,
+                .timeline *::before,
+                .timeline *::after {
                     display: none !important;
                     content: none !important;
+                    background: none !important;
+                    border: none !important;
+                    width: 0 !important;
+                    height: 0 !important;
                 }
             `;
             document.head.appendChild(style);
+            
+            // Method 2: Remove via DOM after page loads
+            window.addEventListener('load', function() {
+                const timeline = document.querySelector('.timeline');
+                if (timeline) {
+                    timeline.style.setProperty('background', 'none', 'important');
+                    timeline.style.setProperty('border', 'none', 'important');
+                }
+            });
         }
     </script>
 </body>

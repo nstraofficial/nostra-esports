@@ -2,20 +2,30 @@
    HISTORY PAGE STYLES
    ========================================== */
 
-/* MOBILE FIRST - FORCE HIDE TIMELINE LINE ON ALL MOBILE DEVICES */
+/* MOBILE FIRST - COMPLETELY REMOVE TIMELINE LINE */
 @media (max-width: 968px) {
+    /* Remove ALL pseudo-elements on mobile */
+    .timeline,
+    .timeline *,
     .timeline::before,
     .timeline::after,
-    *[class*="timeline"]::before,
-    *[class*="timeline"]::after {
-        display: none !important;
+    .timeline-item::before,
+    .timeline-item::after,
+    .timeline-content::before,
+    .timeline-content::after,
+    .timeline-marker::before,
+    .timeline-marker::after {
+        background: none !important;
+        border: none !important;
+    }
+    
+    /* Force no pseudo-element content */
+    .timeline::before,
+    .timeline::after {
         content: none !important;
-        opacity: 0 !important;
-        visibility: hidden !important;
+        display: none !important;
         width: 0 !important;
         height: 0 !important;
-        position: absolute !important;
-        left: -9999px !important;
     }
 }
 
@@ -140,20 +150,23 @@
     margin: 0 auto;
 }
 
-.timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 4px;
-    height: 100%;
-    background: linear-gradient(to bottom, var(--primary-red), var(--blood-red));
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
-    z-index: -1; /* Send to back */
+/* ONLY CREATE LINE ON DESKTOP (above 968px) */
+@media (min-width: 969px) {
+    .timeline::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(to bottom, var(--primary-red), var(--blood-red));
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+        z-index: -1;
+    }
 }
 
-/* Force hide timeline on mobile */
+/* Force hide timeline on mobile - BACKUP SAFETY */
 @media (max-width: 968px) {
     .timeline::before {
         display: none !important;
